@@ -8,10 +8,10 @@ attendance=$((RANDOM%2))
 if [ $attendance -eq $present ]
 then
    echo "Employee Present"
-	dailyhours=8
+	dailyHours=8
 else
    echo "Emmployee Absent"
-	dailyhours=0
+	dailyHours=0
 fi
 perDayWage=$(($dailyHours*$wageperHour))
 
