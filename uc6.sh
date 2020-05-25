@@ -25,13 +25,11 @@ do
 			;;
 	esac
 	completeHours=$(($completeHours+$dailyHours))
-	empWage=$(($dailyHours*$wageperHour))
-	empWageperMonth=$(($empWageperMonth+$empWage))
+	empWageperMonth=$(($completeHours*$wageperHour))
 	if (( $completeHours >= $maxHours ))
 	    then
                 echo "Total working Hours = 100"
                 break
         fi
-
 done
 echo "Employee Wage for month : Rs. $empWageperMonth "
